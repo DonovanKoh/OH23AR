@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <script src="script.js"></script>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <!-- we import arjs version without NFT but with marker + location based support -->
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <body style="margin : 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+        <a-assets>
+            <a-asset-item id="cube" src="docs/Models/ninja.gltf"></a-asset-item>
+            
+            <a-asset-item id="knight" src="docs/Models/knight.gltf"></a-asset-item>
+            <a-asset-item id="mayan" src="docs/Models/mayan.gltf"></a-asset-item>
+            <a-asset-item id="centurion" src="docs/Models/centurion.gltf"></a-asset-item>
+            <a-asset-item id="ninja" src="docs/Models/ninja.gltf"></a-asset-item>
+            <a-asset-item id="viking" src="docs/Models/viking.gltf"></a-asset-item>
+            
+          <a-asset-item id="Ani" src="docs/Text/ANI.gltf"></a-asset-item>
+          <a-asset-item id="All" src="docs/Text/all.gltf"></a-asset-item>
+          <a-asset-item id="Csf" src="docs/Text/CSF.gltf"></a-asset-item>
+          <a-asset-item id="Fi" src="docs/Text/FI.gltf"></a-asset-item>
+          <a-asset-item id="Imgd" src="docs/Text/im.gltf"></a-asset-item>
+            <a-asset-item id="Ict" src="docs/Text/ICT.gltf"></a-asset-item>
+            <a-asset-item id="It" src="docs/Text/IT.gltf"></a-asset-item>
+            <a-asset-item id="CICTP" src="docs/Text/CICTP.gltf"></a-asset-item>
+          
+      </a-assets>
+
+      <!-- IM Marker -->
+	  <a-marker type='pattern' url='docs/OH2023_patterns/pattern-IM.patt'>
+	    <!--<a-entity gltf-model="#viking" animation-mixer
+		  position="-2 1 0"
+		  scale="0.2 0.2 0.2"></a-entity>-->
+		  
+		  <a-entity gltf-model="#Imgd" animation-mixer
+          position="0 1 0"
+          rotation="-45 0 0"
+		  scale="0.05 0.05 0.05"></a-entity>
+	    
+	  <a-text value="Immersive Media" position="-1 0.5 0" rotation="0 0 0" height="5" width="5" color="red"></a-text>	
+	 
+	  </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
